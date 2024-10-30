@@ -1,17 +1,29 @@
 
 
-casesarEncode :: String a => a -> Integer -> a
-casesarEncode [] n = []
+casesarEncode :: String  -> Int -> String
+casesarEncode [] n  = []
 casesarEncode (x:xs) n
-    -- | ((fromEnum x) <= 90) && ((fromEnum x) >= 65) = [toEnum ((((fromEnum (x) - 65) + n ) mod 26) + 65)] ++ (casesarEncode xs n)
-    -- | ((fromEnum x) <= 122) && ((fromEnum x) >= 97) = [toEnum ((((fromEnum(x) - 97) + n ) mod 26) + 97)] ++ (casesarEncode xs n)
-    | ((fromEnum x) <= 90) && ((fromEnum x) >= 65) = ((fromEnum x) - 65) ++ casesarEncode xs n
+    | (((fromEnum x) <= 90) && ((fromEnum x) >= 65)) = [toEnum ((((((fromEnum x) - 65) + n)) `mod` 26) + 65)] ++ casesarEncode xs n
+    | (((fromEnum x) <= 122) && ((fromEnum x) >= 97)) = [toEnum ((((((fromEnum x) - 97) + n)) `mod` 26) + 97)] ++ casesarEncode xs n
     | otherwise = [x] ++ (casesarEncode xs n)
 
 
 
-main = do
-    print "Hello World"
+casesarDecode :: String  -> Int -> String
+casesarDecode [] n  = []
+casesarDecode (x:xs) n
+    | (((fromEnum x) <= 90) && ((fromEnum x) >= 65)) = [toEnum ((((((fromEnum x) - 65) - n)) `mod` 26) + 65)] ++ casesarDecode xs n
+    | (((fromEnum x) <= 122) && ((fromEnum x) >= 97)) = [toEnum ((((((fromEnum x) - 97) - n)) `mod` 26) + 97)] ++ casesarDecode xs n
+    | otherwise = [x] ++ (casesarDecode xs n)
 
-    let result = (casesarEncode "Hello World" 3)
+
+
+
+main = do
+    print "Hello World!"
+
+    let result = (casesarEncode "Hello World!" 3)
     print result
+
+    let result2 = (casesarDecode "Khoor Zruog!" 3)
+    print result2
