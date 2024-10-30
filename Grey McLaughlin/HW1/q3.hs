@@ -1,5 +1,6 @@
 
-
+-- caseserEncode takes the characters that are upper or lowercase letters and adds the shift number to them based on their ascii values.
+-- Other characters besides letters are put into the string as normal.
 casesarEncode :: String  -> Int -> String
 casesarEncode [] n  = []
 casesarEncode (x:xs) n
@@ -7,8 +8,8 @@ casesarEncode (x:xs) n
     | (((fromEnum x) <= 122) && ((fromEnum x) >= 97)) = [toEnum ((((((fromEnum x) - 97) + n)) `mod` 26) + 97)] ++ casesarEncode xs n
     | otherwise = [x] ++ (casesarEncode xs n)
 
-
-
+-- caseserDecode takes the characters that are upper or lowercase letters and subtracts the shift number to them based on their ascii values.
+-- Other characters besides letters are put into the string as normal.
 casesarDecode :: String  -> Int -> String
 casesarDecode [] n  = []
 casesarDecode (x:xs) n
