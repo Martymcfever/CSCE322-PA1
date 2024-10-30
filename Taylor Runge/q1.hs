@@ -1,3 +1,6 @@
+-- This function uses the to and from Enum from the haskell prelude to convert the chars of a string to their ascii values to be modified to their uppercase form
+-- If a char is not a lowercase letter according to the ascii chart it defaults to the otherwise case and is appended as is
+
 reverseString :: String -> String
 reverseString [] = []
 reverseString (x:xs)
