@@ -1,4 +1,6 @@
 
+-- A fuction that has a test case for all letters to convert to the uppercase version.
+-- There is the base case for an empty string that returns nothing and a case for things other than letters to print the same thing.
 
 capitalReverse :: String -> String
 capitalReverse [] = []

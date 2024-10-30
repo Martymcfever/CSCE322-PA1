@@ -8,4 +8,4 @@ exmp x n
 
 
 main = do
-    print (exmp 4 (3))
+    print (exmp (3) (2))
