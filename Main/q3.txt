@@ -1,0 +1,19 @@
+Baseline (PutStrLn "Hello World!"):
+
+    "Hello World!"
+
+Test Case (caseserEncode "Hello World!" 3):
+
+    "Khoor Zruog!"
+
+Test Case (casesarDecode "Khoor Zruog!" 3):
+
+    "Hello World!"
+
+
+
+Entire Test case result:
+
+    "Hello World!"
+    "Khoor Zruog!"
+    "Hello World!"

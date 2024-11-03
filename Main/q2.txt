@@ -1,0 +1,23 @@
+Test 1 (exmp 2 3):
+
+    9.0
+
+Test 2 (exmp 0.5 3):
+
+    0.125
+
+Test 3 (exmp 5 0):
+
+    1.0
+
+Test 4 (exmp (-1 3)):
+
+    -1.0
+
+Test 5 (exmp 2 (-2)):
+
+    q2.exe: Exponent must be non-negative
+
+Test 6 (exmp 0 5):
+
+    q2.exe: Base cannot be 0

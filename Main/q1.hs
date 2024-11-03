@@ -8,6 +8,7 @@ reverseString (x:xs)
   | otherwise = reverseString xs ++ [x]
 
 main = do
-  putStrLn "Hello World"
-  let result = reverseString "Hello World"
-  putStrLn result
+  let string = "Hello World!"
+  putStrLn string
+  putStrLn (reverseString string)
+  

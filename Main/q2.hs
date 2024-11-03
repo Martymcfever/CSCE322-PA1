@@ -14,4 +14,4 @@ exmp x n
 
 
 main = do
-    print (exmp (3) (2))
+    print (exmp (0) (5))
